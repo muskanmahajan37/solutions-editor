@@ -3,7 +3,9 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "bootstrap": "^3.3.6",
+    "medium-editor": "^5.18.0"
   },
   "overrides": {
     "bootstrap-sass": {
