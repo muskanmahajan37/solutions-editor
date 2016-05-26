@@ -28,6 +28,10 @@ function push() {
 
 // push();
 
+$(document).ready(function(){
+  $("#tags").tagsinput('items')
+});
+
 var editor = new MediumEditor('.editable', {
   toolbar: {
     /* These are the default options for the toolbar,
