@@ -1,2 +1,8 @@
-# solution
-Growth Solution Online API
+# Solution Editor
+
+A Editor Growth Solution Online API
+
+License
+-------
+
+MIT
