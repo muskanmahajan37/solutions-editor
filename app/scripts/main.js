@@ -33,6 +33,7 @@ $(document).ready(function(){
 });
 
 var editor = new MediumEditor('.editable', {
+  buttonLabels: 'fontawesome',
   extensions: {
     table: new MediumEditorTable()
   },
