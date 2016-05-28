@@ -54,7 +54,10 @@ body {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
   height: 100%;
+
   .editable {
+    background: #fff;
+    border-radius: 6px;
     min-height: 600px;
     margin-top: 20px;
   }
