@@ -29,7 +29,29 @@ function push() {
 // push();
 
 $(document).ready(function(){
-  $("#tags").tagsinput('items')
+  var stacks = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    prefetch: {
+      url: 'assets/stacks.json',
+      filter: function(list) {
+        console.log(list);
+        return $.map(list, function(stack) {
+          return { name: stack }; });
+      }
+    }
+  });
+  stacks.initialize();
+
+  $('#tagInput').tagsinput({
+    typeaheadjs: {
+      name: 'stacks',
+      displayKey: 'name',
+      valueKey: 'name',
+      source: stacks.ttAdapter()
+    }
+  });
+
 });
 
 var editor = new MediumEditor('.editable', {
