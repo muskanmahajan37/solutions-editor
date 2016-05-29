@@ -45,26 +45,31 @@
     <h3 class="text-muted">Solutions Editor</h3>
   </div>
 
-  <div class="jumbotron">
-    <div class="input-group">
-      <span class="input-group-addon">标题</span>
-      <input type="text" class="form-control" placeholder="Title" aria-describedby="basic-addon1">
-    </div>
-    <br>
-    <div class="input-group">
-      <span class="input-group-addon">标签</span>
-      <input type="text" class="form-control" id="tagInput" placeholder="JavaScript、Python" aria-describedby="basic-addon1">
-    </div>
-    <div class="editable">
-      <p>The dead simple inline editor toolbar.</p>
-      <p><span class="highlight animated shake">Try highlighting this text.</span></p>
-    </div>
+  <div class="jumbotron" >
+    <form data-toggle="validator">
+      <div class="input-group">
+        <span class="input-group-addon">标题</span>
+        <input type="text" class="form-control" placeholder="Title" name="title" required>
+      </div>
+      <br>
+      <div class="input-group">
+        <span class="input-group-addon">标签</span>
+        <input type="text" class="form-control" id="tagInput" placeholder="JavaScript、Python" name="tags" required>
+      </div>
+      <div class="editable">
+        <p>The dead simple inline editor toolbar.</p>
+        <p><span class="highlight animated shake">Try highlighting this text.</span></p>
+      </div>
 
-    <div class="input-group">
-      <span class="input-group-addon">URL</span>
-      <input type="text" class="form-control" id="URL" placeholder="hello-world" aria-describedby="basic-addon1">
-    </div>
-    <button  type="button" class="btn btn-primary">发布到GitHub</button>
+      <div class="input-group">
+        <span class="input-group-addon">URL</span>
+        <input type="text" class="form-control" id="URL" placeholder="hello-world" name="url" required>
+      </div>
+      <br>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">发布到GitHub</button>
+      </div>
+    </form>
   </div>
 </div>
 
@@ -96,6 +101,7 @@
 <!-- build:js scripts/main.js -->
 <script src="scripts/GitHub.bundle.min.js"></script>
 <script src="scripts/bootstrap-tagsinput.min.js"></script>
+<script src="scripts/validator.min.js"></script>
 <script src="scripts/main.js"></script>
 <!-- endbuild -->
 </body>

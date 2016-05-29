@@ -51,7 +51,7 @@ $(document).ready(function(){
       source: stacks.ttAdapter()
     }
   });
-
+  $('.jumbotron').validator()
 });
 
 var editor = new MediumEditor('.editable', {
