@@ -15,7 +15,7 @@ function push(data) {
 
   var stringifyData = JSON.stringify(data);
 
-  repo.writeFile('master', 'content/' + data.title + '.json', stringifyData, 'Robot: add article ' + data.title, options, function (err, data) {
+  repo.writeFile('master', 'content/' + data.url + '.json', stringifyData, 'Robot: add solution ' + data.title, options, function (err, data) {
     if (data.commit) {
       console.log("Commit Success");
     }
