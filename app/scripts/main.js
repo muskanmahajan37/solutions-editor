@@ -79,4 +79,9 @@ $(document).ready(function () {
     push(paramObj);
     event.preventDefault();
   });
+  $("#saveChange").on("click", function (event) {
+    $('#myModal').modal('hide');
+    var token = $('#githubToken').val();
+    localStorage.setItem('token', token);
+  });
 });
