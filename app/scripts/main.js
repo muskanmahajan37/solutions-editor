@@ -1,4 +1,4 @@
-function push(data) {
+function push(category, data) {
   var token = localStorage.getItem('token');
 
   var github = new GitHub({
@@ -15,7 +15,7 @@ function push(data) {
 
   var stringifyData = JSON.stringify(data);
 
-  repo.writeFile('master', 'content/' + data.url + '.json', stringifyData, 'Robot: add solution ' + data.title, options, function (err, data) {
+  repo.writeFile('master', category + '/' + data.url + '.json', stringifyData, 'Robot: add solution ' + data.title, options, function (err, data) {
     if (data.commit) {
       console.log("Commit Success");
     }
@@ -97,12 +97,27 @@ $(document).ready(function () {
 
     paramObj.content = editor.serialize()['element-0'].value;
 
-    push(paramObj);
+    push('content', paramObj);
     event.preventDefault();
   });
+
   $("#saveChange").on("click", function (event) {
     $('#settingModal').modal('hide');
     var token = $('#githubToken').val();
     localStorage.setItem('token', token);
   });
+
+  $('form#stack-form').on('submit', function (event) {
+    var paramObj = {};
+    $.each($('form#stack-form').serializeArray(), function (_, kv) {
+      paramObj[kv.name] = kv.value;
+    });
+
+    paramObj.content = editor2.serialize()['element-0'].value;
+
+    console.log(paramObj);
+    push('stack', paramObj);
+    event.preventDefault();
+  });
+
 });
