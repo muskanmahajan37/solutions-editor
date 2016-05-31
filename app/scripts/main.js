@@ -43,6 +43,27 @@ var editor = new MediumEditor('.editable', {
   }
 });
 
+var editor2 = new MediumEditor('.editable2', {
+  buttonLabels: 'fontawesome',
+  extensions: {
+    table: new MediumEditorTable()
+  },
+  toolbar: {
+    allowMultiParagraphSelection: true,
+    buttons: ['bold', 'italic', 'fontname', 'underline', 'anchor', 'h2', 'h3', 'quote', 'table', 'unorderedlist', 'orderedlist'],
+    diffLeft: 0,
+    diffTop: -10,
+    firstButtonClass: 'medium-editor-button-first',
+    lastButtonClass: 'medium-editor-button-last',
+    standardizeSelectionStart: false,
+    static: false,
+    relativeContainer: null,
+    align: 'left',
+    sticky: false,
+    updateOnEmptySelection: false
+  }
+});
+
 $(document).ready(function () {
   var stacks = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),

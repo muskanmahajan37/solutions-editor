@@ -65,11 +65,58 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="stackModal" tabindex="-1" role="dialog" aria-labelledby="stackModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+        </button>
+        <h4 class="modal-title" id="stackModalLabel">
+          创建技术栈
+        </h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+          <div class="form-group">
+            <form data-toggle="validator" id="stack-form">
+              <div class="input-group">
+                <span class="input-group-addon">标题</span>
+                <input type="text" class="form-control" placeholder="Title" name="title" required>
+              </div>
+              <br/>
+              <div class="editable2">
+                <p>The dead simple inline editor toolbar.</p>
+                <p><span class="highlight animated shake">Try highlighting this text.</span></p>
+              </div>
+
+              <div class="input-group">
+                <span class="input-group-addon">URL</span>
+                <input type="text" class="form-control" id="stackURL" placeholder="hello-world" name="url" required>
+              </div>
+              <br>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">发布到GitHub</button>
+              </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+        </button>
+        <button type="button" class="btn btn-primary" id="saveChange">
+          提交更改
+        </button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 <div class="container">
   <div class="header">
     <ul class="nav nav-pills pull-right">
       <li class="active"><a href="#solution">解决方案</a></li>
-      <li><a href="#" data-toggle="modal" data-target="#settingModal">技术栈</a></li>
+      <li><a href="#" data-toggle="modal" data-target="#stackModal">技术栈</a></li>
       <li><a href="#" data-toggle="modal" data-target="#settingModal">设置</a></li>
       <li><a href="https://github.com/phodal/solutions-editor">GitHub</a></li>
     </ul>
