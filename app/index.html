@@ -36,13 +36,13 @@
 <![endif]-->
 
 <!-- 模态框（Modal） -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="settingModal" tabindex="-1" role="dialog" aria-labelledby="settingModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
         </button>
-        <h4 class="modal-title" id="myModalLabel">
+        <h4 class="modal-title" id="settingModalLabel">
           设置
         </h4>
       </div>
@@ -69,9 +69,9 @@
   <div class="header">
     <ul class="nav nav-pills pull-right">
       <li class="active"><a href="#solution">解决方案</a></li>
-      <li><a href="#stack">技术栈</a></li>
+      <li><a href="#" data-toggle="modal" data-target="#settingModal">技术栈</a></li>
+      <li><a href="#" data-toggle="modal" data-target="#settingModal">设置</a></li>
       <li><a href="https://github.com/phodal/solutions-editor">GitHub</a></li>
-      <li><button class="btn btn-default" data-toggle="modal" data-target="#myModal">设置</button></li>
     </ul>
     <h3 class="text-muted">Solutions Editor</h3>
   </div>

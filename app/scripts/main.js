@@ -80,7 +80,7 @@ $(document).ready(function () {
     event.preventDefault();
   });
   $("#saveChange").on("click", function (event) {
-    $('#myModal').modal('hide');
+    $('#settingModal').modal('hide');
     var token = $('#githubToken').val();
     localStorage.setItem('token', token);
   });
